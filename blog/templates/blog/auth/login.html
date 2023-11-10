@@ -1,16 +1,15 @@
 {% extends "layout.html" %}
+{% load static %}
 
 {% block content %}
-
-
-<header class="intro-header" style="background-image: url('img/contact-bg.jpg')">
+<header class="intro-header" style="background-image: url('{% static 'img/contact-bg.jpg' %}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="page-heading">
                     <h1>Login</h1>
                     <hr class="small">
-                    <span class="subheading">Not Registered Yet? <a href="">Register</a></span>
+                    <span class="subheading">Not Registered Yet? <a href="" style="text-decoration: none; color:antiquewhite;">Register</a></span>
                 </div>
             </div>
         </div>
@@ -20,7 +19,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <form nam>
+            <form method="POST">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Username</label>
@@ -31,7 +30,7 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Password</label>
-                        <input type="email" class="form-control" placeholder="Password" name="password" required data-validation-required-message="Please enter your password.">
+                        <input type="password" class="form-control" placeholder="Password" name="password" required data-validation-required-message="Please enter your password.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
