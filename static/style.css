@@ -1,25 +1,31 @@
 body {
 	background-color: #181818;
-	color: #bec5c7;
+	color: #edecdd;
 	font-family: "Protest Strike", sans-serif;
 }
 
 .branding,
 .nav_link {
-	color: #bec5c7;
+	color: #edecdd;
 	text-decoration: none;
 }
 
 .branding {
-	border: #bec5c7 2px solid;
+	border: #edecdd 2px solid;
 }
 
 .branding:hover,
 .nav_link:hover {
-	color: #edecdd;
+	color: #bec5c7;
 	cursor: pointer;
 }
 
 .branding:hover {
-	border: #edecdd 2px solid;
+	border: #bec5c7 2px solid;
+}
+
+.introduction {
+	font-family: "Ubuntu Mono", monospace;
+	color: #edecdd;
+	width: fit-content;
 }
