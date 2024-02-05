@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block content %}
+<p></p>
+
+<div class="row">
+
+    <div class="col-sm-9 mx-auto mt-3">
+        {% if request.user.is_superuser %}
+        <a href="{% url 'add_log' %}">
+            <button class="form_button mb-4 fs-5 rounded-pill px-5 py-1">
+                Add
+            </button>
+        </a>
+        {% endif %}
+        {% for log in logs %}
+        <div class="bordered_container rounded-3 mx-auto mb-5 px-4 py-2">
+            <p class="fs-6 mt-3">{{log.created}}</p>
+            <p class="fs-3">{{log.subject}}</p>
+            <p class="fs-5">{{log.log}}</p>
+            {% if request.user.is_superuser %}
+            <div>
+                <a href="{% url 'update_log' log.id %}">
+                    <button class="form_button mb-4 fs-6 me-1 rounded-3 px-3 py-1 ">
+                        Update
+                    </button>
+                </a>
+
+                <a href="{% url 'delete_log' log.id %}">
+                    <button class="form_button mb-4 fs-6 rounded-3 px-3 py-1">
+                        Delete
+                    </button>
+                </a>
+
+            </div>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

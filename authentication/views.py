@@ -7,6 +7,8 @@ def register_view(request):
     error = ""
     form_action = "Register"
 
+    username, password = "", ""
+
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -24,12 +26,14 @@ def register_view(request):
                 login(request, user)    
                 return redirect("home")
 
-    context = {"form_action": form_action, "error": error}
+    context = {"form_action": form_action, "error": error, "username": username, "password": password}
     return render(request, "auth_form.html", context)
 
 def login_view(request):
     error = ""
     form_action = "Login"
+
+    username, password = "", ""
 
     if request.method == "POST":
         username = request.POST.get("username")
@@ -52,7 +56,7 @@ def login_view(request):
             except User.DoesNotExist:
                 error = "User with username does not exist!"
 
-    context = {"form_action": form_action, "error": error}
+    context = {"form_action": form_action, "error": error, "username": username, "password": password}
     return render(request, "auth_form.html", context)
 
 def logout_view(request):
