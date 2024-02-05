@@ -38,5 +38,36 @@ body {
 }
 
 .introduction_container {
+	border: #edecdd 1px solid;
+}
+
+.error {
+	font-family: "Ubuntu", sans-serif;
+}
+
+.form {
+	font-family: "Ubuntu Mono", monospace;
+	border: #edecdd 3px dashed;
+}
+
+.form_heading {
+	font-family: "Protest Strike", sans-serif;
+}
+
+.form_input {
 	border: #edecdd 2px solid;
+	background-color: #181818;
+	color: #edecdd;
+}
+
+.form_button {
+	background-color: #edecdd;
+	color: #181818;
+	border: #181818 1px solid;
+}
+
+.form_button:hover {
+	background-color: #181818;
+	color: #edecdd;
+	border: #edecdd 1px solid;
 }
