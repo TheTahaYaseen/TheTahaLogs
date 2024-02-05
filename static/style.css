@@ -1,11 +1,12 @@
 body {
 	background-color: #181818;
 	color: #edecdd;
-	font-family: "Protest Strike", sans-serif;
+	font-family: "Ubuntu", sans-serif;
 }
 
 .branding,
 .nav_link {
+	font-family: "Protest Strike", sans-serif;
 	color: #edecdd;
 	text-decoration: none;
 }
@@ -24,8 +25,18 @@ body {
 	border: #bec5c7 2px solid;
 }
 
-.introduction {
+.introduction_heading {
 	font-family: "Ubuntu Mono", monospace;
 	color: #edecdd;
 	width: fit-content;
+}
+
+.introduction_subtitle {
+	font-family: "Ubuntu Mono", monospace;
+	color: #bec5c7;
+	width: fit-content;
+}
+
+.introduction_container {
+	border: #edecdd 2px solid;
 }
